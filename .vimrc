@@ -25,6 +25,10 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_ViewRuleComplete_pdf='mupdf $*.pdf &'
 
 colorscheme onehalflight
+
 autocmd BufNewFile,BufRead *.hs set expandtab
 
 execute pathogen#infect()
+
+set guifont=Courier\ New
+set guioptions-=T
