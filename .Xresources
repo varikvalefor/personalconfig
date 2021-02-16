@@ -1,0 +1,6 @@
+XTerm*faceName: Courier New
+XTerm*faceSize: 10
+XTerm*vt100.scrollBar: false
+dzen2.ffont: Courier New
+dzen2.foreground: #FFFFFF
+dzen2.background: #002020
