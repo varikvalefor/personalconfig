@@ -1,0 +1,5 @@
+export PS1="$(hostname -s):\$(pwd)# "
+export TEXMFOUTPUT="/tmp"
+alias cxx="c++ -L/usr/local/lib/ -I/usr/local/include/ -lgmp -lgmpxx"
+alias cC="cc -L/usr/local/lib/ -I/usr/local/include -lgmp"
+alias hs="ghc -O2"
