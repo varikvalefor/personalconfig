@@ -26,7 +26,7 @@ let g:Tex_ViewRuleComplete_pdf='mupdf $*.pdf &'
 
 colorscheme onehalflight
 
-autocmd BufNewFile,BufRead *.hs set expandtab
+autocmd BufNewFile,BufRead *.hs *.cabal set expandtab
 
 execute pathogen#infect()
 
