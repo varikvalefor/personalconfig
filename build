@@ -1,0 +1,15 @@
+# bringin u rfuckin
+# sex nads
+# 7.25 days a week
+
+rm -f xmonad.tmp xmonad.o xmonad.hi
+ghc -package xmonad -package xmonad-contrib -O2 -dynamic -Wall xmonad.hs
+rm -f /usr/local/bin/xmonad
+
+case $(uname -s) in
+        "OpenBSD") ln -s xmonad xmonad-x86_64-openbsd;;
+        "FreeBSD") ln -s xmonad xmonad-x86_64-freebsd;;
+        *) echo "An unrecognised operating system is used!" >& 2;;
+esac
+
+cp ~/.xmonad/xmonad /usr/local/bin/xmonad
