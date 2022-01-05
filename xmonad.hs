@@ -13,9 +13,7 @@ import XMonad.Actions.CopyWindow;
 import XMonad.Hooks.DynamicLog (xmobar);
 import XMonad.Layout.NoBorders (noBorders, smartBorders);
 
-myLayout =
-  smartBorders $
-  Grid ||| noBorders Full ||| Tall 1 (3/100) (1/2);
+myLayout = smartBorders $ Grid ||| noBorders Full ||| Tall 1 (3/100) (1/2);
 
 conph = def {
   modMask = mod4Mask,
