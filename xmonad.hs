@@ -28,16 +28,13 @@ conph = def {
 } `additionalKeysP` keybinds;
 
 keybinds :: [(String, X ())];
-keybinds =
-  [
-    ("M-a",       windows copyToAll),
-    ("M-S-a",     killAllOtherCopies),
-    ("M-x c m",   spawn "claws-mail"),
-    ("M-x w e b", spawn "(ulimit -d 2048000; su vvx -c iridium)"),
-    ("M-x k u t", spawn  "(ulimit -d 1024000; su vvx -c qutebrowser)"),
-    ("M-r s n",   spawn "redshift -PO 3000"),
-    ("M-x k y s", spawn "sh ~/.scripts/scrot.sh"),
-    ("M-r s f",   spawn "redshift -x")
-  ];
+keybinds = [("M-a",       windows copyToAll),
+            ("M-S-a",     killAllOtherCopies),
+            ("M-x c m",   spawn "claws-mail"),
+            ("M-x w e b", spawn "(ulimit -d 2048000; su vvx -c iridium)"),
+            ("M-x k u t", spawn  "(ulimit -d 1024000; su vvx -c qutebrowser)"),
+            ("M-r s n",   spawn "redshift -PO 3000"),
+            ("M-x k y s", spawn "sh ~/.scripts/scrot.sh"),
+            ("M-r s f",   spawn "redshift -x")];
 
 main = xmonad <=< xmobar $ ewmh conph;
