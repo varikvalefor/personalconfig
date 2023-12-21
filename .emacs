@@ -13,7 +13,7 @@
  '(global-ede-mode t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(term+ gnu-apl-mode evil-nl-break-undo annotation eri 2048-game haskell-mode evil))
+   '(term+ gnu-apl-mode evil-nl-break-undo annotation eri 2048-game evil))
  '(semantic-mode t))
 
 (require 'evil)
