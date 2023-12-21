@@ -1,5 +1,6 @@
 Config {
 	font = "xft:Courier New:pixelsize=12"
+	, additionalFonts = ["APL385 Unicode 10","Fira Code 10"]
 	, bgColor = "#002020"
 	, fgColor = "#44AAAA"
 	, commands = [
@@ -7,6 +8,9 @@ Config {
 		, Run Date "%Y%m%d.%H%M%S" "date" 10
 		, Run Com "sh" ["/root/scripts/loadgetter"] "load" 36
 		, Run StdinReader
+		, Run Kbd [("us", "US"),
+			   ("apl(dyalog)", "<fn=1>⍝⍴⌊</fn>"),
+			   ("jbo_zlm", "<fn=2> </fn>")]
 	]
-	, template = "Sex Nads %StdinReader%}{%load%   %uname%   %date%"
+	, template = "Sex Nads %StdinReader%}{%kbd%   %load%   %uname%   %date%"
 }
