@@ -12,9 +12,9 @@ export HISTFILE=~/.ksh_history
 export HISTSIZE=99999999
 export FG_AIRCRAFT=~/.fgfs/aircraft-data
 
-export PATH="$PATH:/usr/local/jdk-11/bin" # Add Java crap
-export PATH="$PATH:/root/.cabal/bin" # Add Cabal crap
-export PATH=$PATH:$(go env GOROOT)/bin:$(go env GOPATH)/bin # Add Go crap
+export PATH="$PATH:/usr/local/jdk-11/bin"
+export PATH="$PATH:/root/.cabal/bin"
+export PATH=$PATH:$(go env GOROOT)/bin:$(go env GOPATH)/bin
 
 if [ $TERM=xterm ]
 	then export TERM=xterm-256color
