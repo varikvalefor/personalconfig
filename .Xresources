@@ -1,6 +1,14 @@
 XTerm*faceName: Courier New
 XTerm*faceSize: 10
+XTerm*scrollLines: 65536
 XTerm*vt100.scrollBar: false
+XTerm*loginShell: true
+XTerm*saveLines: 9999
+XTerm*reverseWrap: true
+
 dzen2.ffont: Courier New
 dzen2.foreground: #FFFFFF
 dzen2.background: #002020
+
+NetHack*font: vga
+NetHack.tile_file: /usr/local/lib/nethackdir-3.6.0/x11tiles
