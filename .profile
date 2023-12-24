@@ -56,7 +56,6 @@ function ltx_internal {
 }
 
 function ltx {
-	echo $1
 	G=${1%.tex}.pdf;
 
 	if test -e $G
