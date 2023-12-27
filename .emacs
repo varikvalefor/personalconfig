@@ -43,4 +43,7 @@
 
 
 (global-font-lock-mode 0)
+;; | ni'o snuti fa lo so'i broda cei nu la .varik. cu
+;; mu'oi zoi. C-x C-c .zoi. sisti tu'a la'oi .EMACS.
+;; .i la .varik. cu toldji lo nu lo broda cu snuti
 (global-set-key (kbd "C-x C-c") nil)
