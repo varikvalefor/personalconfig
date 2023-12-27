@@ -9,7 +9,11 @@
  '(agda2-highlight-face-groups 'default-faces)
  '(agda2-highlight-level 'none)
  '(agda2-program-args
-   '("--ghc-flag=-package random" "--ghc-flag=-dynamic" "--ghc-flag=-O2" "-v3" "--ghc-flag=-package plegg"))
+   '("--ghc-flag=-package random"
+     "--ghc-flag=-dynamic"
+     "--ghc-flag=-O2"
+     "-v3"
+     "--ghc-flag=-package plegg"))
  '(global-ede-mode t)
  '(inhibit-startup-screen t)
  '(package-selected-packages
