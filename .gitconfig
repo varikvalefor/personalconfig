@@ -1,0 +1,16 @@
+[user]
+	name = la .varik. .VALefor.
+	email = varikvalefor@aol.com
+[pack]
+	windowMemory = 512M
+	compression = 9
+	depth = 512
+[gc]
+	aggressiveWindow = 3000
+[cola]
+[diff]
+	algorithm = minimal
+[color]
+	ui = false
+[gui]
+	recentrepo = /mnt/prgs/matel
