@@ -1,3 +1,4 @@
+#!/bin/ksh
 ulimit -c 0
 
 # VI mode is a bit weird at first but works pretty well.
