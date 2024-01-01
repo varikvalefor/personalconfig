@@ -47,6 +47,9 @@ function ltx_internal {
 		lualatex $1;
 	);
 
+	# | ni'o xu cadga fa lo nu vimcu  .i ga je pilno
+	# la'o zoi. ltx_internal .zoi. tu'a lo mulno noi
+	# tu'a lo se vimcu cu na sarcu lo nu pilno ke'a
 	for i in dvi log aux toc out bbl snm nav blg
 	do
 		rm ${1%.tex}.$i &
