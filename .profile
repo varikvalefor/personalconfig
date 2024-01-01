@@ -39,6 +39,8 @@ alias gd="git diff $GITFLAGS"
 
 alias cpy="rsync --progress --compress-level=6 -r"
 
+alias nab="wget --restrict-file-names=windows -k --adjust-extension --span-hosts --convert-links --backup-converted --page-requisites"
+
 # FUNCTIONS ------------------------------------------------------------
 function ltx_internal {
 	lualatex --draftmode $1 && (
@@ -91,8 +93,6 @@ function lossyComp {
   ffmpeg -i $TMP -f u8 -ar 11025 $1.compressed;
   rm $TMP;
 }
-
-alias nab="wget --restrict-file-names=windows -k --adjust-extension --span-hosts --convert-links --backup-converted --page-requisites"
 
 function ltxl {
 	ltx $1 &&
