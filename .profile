@@ -72,8 +72,7 @@ function ltx {
 }
 
 function vtx {
-	ltx $1 &&
-	mupdf ${1%.tex}.pdf;
+	ltx $1 && mupdf ${1%.tex}.pdf;
 }
 
 function venko {
