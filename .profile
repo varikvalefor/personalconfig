@@ -7,7 +7,7 @@ set -o vi
 export GITFLAGS="--word-diff=color --word-diff-regex=."
 
 export PS1="\u@\h:\w\\$ "
-export TEXMFOUTPUT="/tmp"
+export TEXMFOUTPUT=$TMPDIR
 export HISTFILE=~/.ksh_history
 export HISTSIZE=99999999
 export FG_AIRCRAFT=~/.fgfs/aircraft-data
