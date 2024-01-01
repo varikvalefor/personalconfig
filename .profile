@@ -39,8 +39,6 @@ alias gd="git diff $GITFLAGS"
 
 alias cpy="rsync --progress --compress-level=6 -r"
 
-alias vex='vim -e'
-
 # FUNCTIONS ------------------------------------------------------------
 function ltx_internal {
 	lualatex --draftmode $1 && (
