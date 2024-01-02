@@ -43,10 +43,10 @@ alias nab="wget --restrict-file-names=windows -k --adjust-extension --span-hosts
 
 # FUNCTIONS ------------------------------------------------------------
 function ltx_internal {
-	lualatex --draftmode $1 && (
-		bibtex ${1%.tex};
-		lualatex --draftmode $1 &&
-		lualatex $1;
+	lualatex --draftmode "$1" && (
+		bibtex "${1%.tex}";
+		lualatex --draftmode "$1" &&
+		lualatex "$1";
 	);
 
 	# | ni'o xu cadga fa lo nu vimcu  .i ga je pilno
@@ -54,27 +54,27 @@ function ltx_internal {
 	# tu'a lo se vimcu cu na sarcu lo nu pilno ke'a
 	for i in dvi log aux toc out bbl snm nav blg
 	do
-		rm ${1%.tex}.$i &
+		rm "${1%.tex}.$i" &
 	done;
 }
 
 function ltx {
-	G=${1%.tex}.pdf;
+	G="${1%.tex}.pdf";
 
 	if test -e $G
 	then
-		if test $(stat -f '%m' $G) -le $(stat -f '%m' $1)
+		if test "$(stat -f '%m' \"$G\")" -le "$(stat -f '%m' \"$1\")"
                 then
-			ltx_internal $1;
+			ltx_internal "$1";
 		else
 			echo "The file is aleady compiled, jack-ass.";
 		fi
-	else ltx_internal $1;
+	else ltx_internal "$1";
 	fi
 }
 
 function vtx {
-	ltx $1 && mupdf ${1%.tex}.pdf;
+	ltx "$1" && mupdf "${1%.tex}.pdf";
 }
 
 function venko {
@@ -85,19 +85,19 @@ function venko {
 function guido {
 	# | ni'o pilno ko'a goi la'o zoi. dd(1) .zoi. ki'u le
 	# su'u ko'a me'oi .lazy.
-	tr -dc A-Za-z0-9 < /dev/random | dd if=/dev/stdin of=/dev/stdout bs=1 count=$1 status=none;
+	tr -dc A-Za-z0-9 < /dev/random | dd if=/dev/stdin of=/dev/stdout bs=1 "count=$1" status=none;
 	echo "";
 }
 
 function lossyComp {
   TMP=$(mktemp -t $(yes X | head -n 32 | perl -0777pe 's/\n//g'));
-  ffmpeg -f u8 -ar 11025 -i $1 -q 0 $TMP;
-  ffmpeg -i $TMP -f u8 -ar 11025 $1.compressed;
-  rm $TMP;
+  ffmpeg -f u8 -ar 11025 -i "$1" -q 0 "$TMP";
+  ffmpeg -i "$TMP" -f u8 -ar 11025 "$1.compressed";
+  rm "$TMP";
 }
 
 function ltxl {
-	ltx $1 &&
-	git add $1 ${1%.tex}.pdf &&
+	ltx "$1" &&
+	git add "${1%.tex}.pdf" &&
 	git commit -am "$2";
 }
