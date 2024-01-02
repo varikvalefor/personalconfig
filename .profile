@@ -18,9 +18,7 @@ export PATH="$PATH:/usr/local/jdk-11/bin"
 # ro skami po la .varik.
 which go 2> /dev/null > /dev/null && export PATH=$PATH:$(go env GOROOT)/bin:$(go env GOPATH)/bin
 
-if [ $TERM=xterm ]
-	then export TERM=xterm-256color
-fi
+[ $TERM=xterm ] && export TERM=xterm-256color
 
 # ALIASES --------------------------------------------------------------
 alias cxx="c++ -Ofast -L/usr/local/lib/ -I/usr/local/include/ -lgmp -lgmpxx"
