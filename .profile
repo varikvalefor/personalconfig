@@ -13,8 +13,10 @@ export HISTSIZE=99999999
 export FG_AIRCRAFT=~/.fgfs/aircraft-data
 
 export PATH="$PATH:/usr/local/jdk-11/bin"
-export PATH="$PATH:/root/.cabal/bin"
-export PATH=$PATH:$(go env GOROOT)/bin:$(go env GOPATH)/bin
+# | ni'o pilno le me la'oi .&&. co'e ki'u le su'u jitfa
+# fa le du'u la .varik. cu co'e la'o zoi. go(1) .zoi. lo
+# ro skami po la .varik.
+which go 2> /dev/null > /dev/null && export PATH=$PATH:$(go env GOROOT)/bin:$(go env GOPATH)/bin
 
 if [ $TERM=xterm ]
 	then export TERM=xterm-256color
