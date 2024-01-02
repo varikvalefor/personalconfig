@@ -90,7 +90,7 @@ function guido {
 }
 
 function lossyComp {
-  TMP=$(mktemp -t $(yes X | head -n 32 | perl -0777pe 's/\n//g'))
+  TMP=$(mktemp -t $(yes X | head -n 32 | perl -0777pe 's/\n//g'));
   ffmpeg -f u8 -ar 11025 -i $1 -q 0 $TMP;
   ffmpeg -i $TMP -f u8 -ar 11025 $1.compressed;
   rm $TMP;
