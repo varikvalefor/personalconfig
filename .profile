@@ -83,6 +83,8 @@ function venko {
 }
 
 function guido {
+	# | ni'o pilno ko'a goi la'o zoi. dd(1) .zoi. ki'u le
+	# su'u ko'a me'oi .lazy.
 	tr -dc A-Za-z0-9 < /dev/random | dd if=/dev/stdin of=/dev/stdout bs=1 count=$1 status=none;
 	echo "";
 }
