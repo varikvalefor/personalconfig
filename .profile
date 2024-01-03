@@ -61,7 +61,7 @@ function ltx_internal {
 function ltx {
 	G="${1%.tex}.pdf";
 
-	if test -e $G
+	if test -e "$G"
 	then
 		if test "$(stat -f '%m' \"$G\")" -le "$(stat -f '%m' \"$1\")"
                 then
