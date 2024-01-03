@@ -44,11 +44,10 @@ alias nab="wget --restrict-file-names=windows -k --adjust-extension --span-hosts
 
 # FUNCTIONS ------------------------------------------------------------
 function ltx_internal {
-	lualatex --draftmode "$1" && (
-		bibtex "${1%.tex}";
-		lualatex --draftmode "$1" &&
-		lualatex "$1";
-	);
+	lualatex --draftmode "$1" &&
+	bibtex "${1%.tex}";
+	lualatex --draftmode "$1" &&
+	lualatex "$1";
 
 	# | ni'o xu cadga fa lo nu vimcu  .i ga je pilno
 	# la'o zoi. ltx_internal .zoi. tu'a lo mulno noi
