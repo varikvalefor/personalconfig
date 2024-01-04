@@ -34,8 +34,8 @@ alias dt.iny="date -u +%Y%m%d%H%M%S\ UTC"
 alias dt.loc="date +%Y%m%d%H%M%S"
 alias dt.nan="date +%Y%m%d.%H%M%S"
 
-alias gs="git show $GITFLAGS"
-alias gd="git diff $GITFLAGS"
+alias gs="git show \$GITFLAGS"
+alias gd="git diff \$GITFLAGS"
 alias gek="git commit -v"
 
 alias cpy="rsync --progress --compress-level=6 -r"
