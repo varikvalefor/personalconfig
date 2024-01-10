@@ -7,11 +7,11 @@ Config {
 		Run Com "uname" ["-s", "-r"] "" 36000
 		, Run Date "%Y%m%d.%H%M%S" "date" 10
 		, Run Com "sh" ["/root/scripts/loadgetter"] "load" 36
-		, Run Com "sh" ["/root/.scripts/batter.ksh"] "batman" 100
+		, Run Com "sh" ["/root/.scripts/batter.ksh"] "pat" 100
 		, Run StdinReader
 		, Run Kbd [("us", "US"),
 			   ("apl(dyalog)", "<fn=1>⍝⍴⌊</fn>"),
 			   ("jbo_zlm", "<fn=2> </fn>")]
 	]
-	, template = "Sex Nads %StdinReader%}{%batman%   %kbd%   %load%   %uname%   %date%"
+	, template = "Sex Nads %StdinReader%}{%pat%   %kbd%   %load%   %uname%   %date%"
 }
